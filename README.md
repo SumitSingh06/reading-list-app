@@ -2,7 +2,7 @@
 
 A simple, responsive Reading List web application for students. Add books, track their reading status, filter the list, and see a quick summary.
 
-**Deployed link:** ADD_YOUR_VERCEL_LINK_HERE
+**Deployed link:** (https://reading-list-app-kappa.vercel.app/)
 
 ## Features
 - Add a book with a title and a reading status (Want to Read, Reading, Finished)
