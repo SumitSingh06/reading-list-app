@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reading List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <h1>My Reading List</h1>
+        <p class="subtitle">Track the books you want to read, are reading and have finished.</p>
+
+        <section class="summary" id="summary" aria-label="Summary">
+            <div class="stat"><span class="stat-number" id="totalCount">0</span><span class="stat-label">Total Books</span></div>
+            <div class="stat"><span class="stat-number" id="readingCount">0</span><span class="stat-label">Currently Reading</span></div>
+            <div class="stat"><span class="stat-number" id="finishedCount">0</span><span class="stat-label">Finished</span></div>
+        </section>
+
+        <form id="bookForm" class="book-form" novalidate>
+            <label for="titleInput" class="visually-hidden">Book title</label>
+            <input type="text" id="titleInput" placeholder="Book title" autocomplete="off">
+
+            <label for="statusSelect" class="visually-hidden">Reading status</label>
+            <select id="statusSelect">
+                <option value="Want to Read">Want to Read</option>
+                <option value="Reading">Reading</option>
+                <option value="Finished">Finished</option>
+            </select>
+
+            <button type="submit">Add Book</button>
+        </form>
+        <p id="message" class="message" role="alert"></p>
+
+        <div class="filters" id="filters" role="group" aria-label="Filter books by status">
+            <button type="button" class="filter active" data-filter="All">All</button>
+            <button type="button" class="filter" data-filter="Want to Read">Want to Read</button>
+            <button type="button" class="filter" data-filter="Reading">Reading</button>
+            <button type="button" class="filter" data-filter="Finished">Finished</button>
+        </div>
+
+        <section id="bookList" class="book-list" aria-live="polite"></section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
